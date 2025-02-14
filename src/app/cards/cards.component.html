@@ -1,0 +1,7 @@
+<div class="card border-0" [ngClass]="isActive ? 'active' : ''">
+  <fa-icon *ngIf="icon" [icon]="ficons[icon]" class="circle-icon"></fa-icon>
+
+  <fa-icon [icon]="ficons.faEllipsisVertical" class="card-menu"></fa-icon>
+  <p>{{ label }}</p>
+  <h2>${{ amount }}</h2>
+</div>

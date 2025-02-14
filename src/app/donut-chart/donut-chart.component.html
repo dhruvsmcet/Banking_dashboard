@@ -1,0 +1,38 @@
+<div class="card border-0 p-3">
+  <div class="row">
+    <div class="col">
+      <span><b>All Expences</b></span>
+      <span class="float-end font">Monthly </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div
+        class="chart-container"
+        style="position: relative; height: 250px; width: 300px"
+      >
+        <canvas
+          class="text-center"
+          #chartCanvas
+          baseChart
+          [data]="doughnutChartData"
+          [type]="'doughnut'"
+          [options]="chartOptions"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <span class="fs-12"> Daily</span>
+      <span> <br /><b>$573.12</b><br /></span>
+    </div>
+    <div class="col">
+      <span class="fs-12">Weakly</span><span> <br /><b>$4791</b><br /></span>
+    </div>
+    <div class="col">
+      <span class="fs-12">Monthly</span><span><br /><b>$19112</b><br /></span>
+    </div>
+  </div>
+</div>

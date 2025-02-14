@@ -1,0 +1,24 @@
+<div class="card border-0">
+  <div class="row p-2">
+    <div class="col">
+      <span><b>Finance</b></span>
+      <span class="float-end fs-12">
+        &#9679;Income&nbsp;&nbsp; &#9679;Outcome&nbsp;&nbsp; Monthly
+        &nbsp;&nbsp;<fa-icon [icon]="faChevronDown"></fa-icon
+      ></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="w-100">
+        <canvas
+          baseChart
+          class="chart"
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [type]="'line'"
+        ></canvas>
+      </div>
+    </div>
+  </div>
+</div>

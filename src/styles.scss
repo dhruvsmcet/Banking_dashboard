@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  color: #000;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+body {
+  background-color: #fafafa;
+}
+$grey-color: #969696;
+
+.fs-12 {
+  font-size: 12px;
+  color: $grey-color;
+}

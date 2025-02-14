@@ -1,0 +1,55 @@
+<div class="card border-0">
+  <div class="card-header border-0">
+    <span class="fw-bold">Transactions</span>
+    <span class="float-end"
+      >Recent&nbsp;&nbsp; <fa-icon [icon]="faIcon"></fa-icon
+    ></span>
+  </div>
+  <div class="card-body">
+    <div class="accordion" id="accordionExample">
+      <div
+        class="accordion-item border-0 border-bottom"
+        *ngFor="let record of records"
+      >
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button collapsed p-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="false"
+            aria-controls="collapseOne"
+          >
+            <div class="row w-100 font">
+              <div class="col-1">
+                <img [src]="record.picture" class="rounded-circle" />
+              </div>
+              <div class="col-2">
+                {{ record.name }}
+              </div>
+              <div class="col-2">{{ record.company }}</div>
+              <div class="col-3">
+                {{
+                  record.registered
+                    | date
+                      : "dd/MM/yy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h:mm:ss a"
+                }}
+              </div>
+
+              <div class="col-2">{{ record.balance }}</div>
+              <div
+                class="col-2 fw-bold"
+                [ngClass]="{
+                  'text-danger': record.status === 'pending',
+                  'text-success': record.status === 'completed'
+                }"
+              >
+                {{ record.status }}
+              </div>
+            </div>
+          </button>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>

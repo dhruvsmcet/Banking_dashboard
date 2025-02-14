@@ -1,0 +1,64 @@
+<div class="container-fluid mt-5">
+  <h2>{{ "500" | custom : "&euro;" }}</h2>
+  <div class="row">
+    <div class="col-9">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <app-cards
+              [icon]="'faWallet'"
+              [label]="'Balance'"
+              [amount]="currentBalance?.balance"
+              [isActive]="true"
+            ></app-cards>
+          </div>
+          <div class="col">
+            <app-cards
+              [icon]="'faHandHoldingDollar'"
+              [label]="'Income'"
+              [amount]="currentBalance?.income"
+              [isActive]="false"
+            ></app-cards>
+          </div>
+          <div class="col">
+            <app-cards
+              [icon]="'faPiggyBank'"
+              [label]="'Saving'"
+              [amount]="currentBalance?.savings"
+              [isActive]="false"
+            ></app-cards>
+          </div>
+          <div class="col">
+            <app-cards
+              [icon]="'faArrowDownLong'"
+              [label]="'Expence'"
+              [amount]="currentBalance?.expenses"
+              [isActive]="false"
+            ></app-cards>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-8">
+            <div class="chart">
+              <app-area-chart></app-area-chart>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="chart">
+              <app-donut-chart></app-donut-chart>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <app-transactions [records]="lastTransaction"> </app-transactions>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <app-my-card></app-my-card>
+    </div>
+  </div>
+</div>
